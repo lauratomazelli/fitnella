@@ -26,24 +26,34 @@
         </nav>
     </header>
 
-    <h1>Olá Fitmember!</h1>
-    <p>Faça seu login:</p>
-    
-    <form action="enviar-dados" method="post">
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" placeholder="Digite seu email" required>
-        
+    <main class="conteudo-principal">
+        <h1 class="principal-titulo">Olá Fitmember!</h1>
+        <div class= "conteudo-principal-card">
+            <p>Faça seu login:</p>
+            
+            <form action="enviar-dados" method="post">
 
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
-        
+                <section class="login-card">
+                    <div class="login-card-email">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                    </div>
 
-        <button type="submit">Entrar</button>
-        <p>Ainda não tem sua conta?</p>
-        <a href="cadastro.html">Criar conta</a>
+                    <div class="login-card-senha">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                    </div>
 
-    </form>
-    <main>
+                    <button type="submit">Entrar</button>
+                    <div class="conta-card">
+                        <p class="conta">Ainda não tem sua conta?</p>
+                        <a class="conta-cadastro" href="cadastro.html">Criar conta</a>
+                    </div>
+
+                </section>    
+
+            </form>
+        </div>
 
 
     </main>

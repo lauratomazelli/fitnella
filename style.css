@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* faz com que o body ocupe 100% da altura da tela */
+    display: flex; 
+    flex-direction: column; 
+  }
+
 :root {
     --cor-fundo: #F7F4EF; /* Bege claro */
     --cor-texto-principal: #305438; /* Verde escuro */
@@ -15,6 +27,7 @@ body {
     color: var(--cor-texto-principal);
     font-family: 'Poppins', sans-serif; /* Textos normais */
     line-height: 1.6; /* Espaçamento entre as linhas */
+    height: 100%;
 }
 
 .logo {
@@ -86,6 +99,11 @@ main{
     display: flex;
     align-items: flex-start;
     padding: 0;
+}
+
+.principal-titulo{
+    font-size: 30px;
+    font-weight: 800;
 }
 
 /* Layout principal */
@@ -182,3 +200,118 @@ main{
     font-size: 14px;
     color: var(--cor-texto-secundario); 
 }
+
+footer{
+  text-align: center;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+
+}
+
+h1{
+    color: var(--cor-botao); 
+    font-size: 18px;
+    margin-bottom: 10px; /* espaçamento entre título e descrição */
+}
+
+.descricao {
+    font-size: 14px;
+    color: var(--cor-texto-secundario); 
+}
+
+.conteudo-principal-card{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 30px; 
+    max-width: 1120px;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 5px;
+    padding-right: 50%;
+}
+
+.conteudo-principal-card, h1{
+    margin: 0;
+}
+
+.conteudo-principal-card, p{
+    margin: 0;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.categorias{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
+   
+}
+
+.card{
+    background-color: rgba(181, 197, 178, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    gap: 10px; 
+    flex-wrap: wrap;
+}
+
+.conteudo-principal-card, .carrossel-novidades, .carrossel-avaliadas, .card-cadastro{
+    flex: 1; /* Cada card ocupa metade do espaço disponível */
+    background-color: rgba(181, 197, 178, 0.3); 
+    padding: 20px; /* Espaçamento interno de cada card */
+    border-radius: 8px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.conteudo-principal-card, {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+}
+
+.login-card{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.login-card-email, .login-card-senha, .conta-card{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+ .conta-cadastro, .conta{
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+}
+
+.card-cadastro, .cadastro-dados {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card-cadastro{
+    width: 50%;
+
+}
+ button{
+    padding: 10px;
+    width: 25%;
+   
+ }
