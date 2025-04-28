@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor-fundo: #F7F4EF; /* Bege claro */
+    --cor-texto-principal: #305438; /* Verde escuro */
+    --cor-botao: #1F4624; /* Verde botão */
+    --cor-folhas: #B5C5B2; /* Verde claro */
+    --cor-texto-secundario: #333333; /* Preto suave */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    font-family: 'Poppins', sans-serif; /* Textos normais */
+    line-height: 1.6; /* Espaçamento entre as linhas */
+}
+
+.logo {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    text-decoration: none;
+    margin-right: auto;
+    margin: 0;
+
+}
+
+.logo-imagem {
+    width: 25px; /* Ajuste do tamanho da folhinha da logo */
+    height: auto;
+    gap: 10px;
+}
+
+.logo-texto {
+    font-family: 'Playfair Display', serif; /* Estilo bonito para o nome e títulos, destaques etc*/
+    font-size: 28px;
+    color: var(--cor-texto-principal);
+    text-align: center;
+    align-items: center;
+    font-size: 36px;
+}
+
+.cabecalho {
+    background-color: var(--cor-fundo); /* Mesmo fundo da página, só por um sombreado */
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombreado mais sutil */
+
+}
+
+.menu{
+    max-width: 1120px;/*define largura máxima da tela*/
+    margin: 0; /*pra centralizar*/
+    padding: 0; /*espaço na lateral*/
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-lista{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    gap: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--cor-texto-principal);
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif; 
+    color: var(--cor-texto-principal); 
+    margin: 0;
+    font-weight: 550;
+}
+
+main{
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+}
+
+/* Layout principal */
+.conteudo-principal {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 20px; 
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Texto à esquerda */
+.texto {
+    flex: 1; /* Ocupa o espaço necessário */
+    max-width: 60%; /* Limita a largura do texto */
+}
+
+/* Carrossel à direita */
+.carrossel {
+    flex: 1; /* Ocupa o espaço restante */
+    text-align: right; /* Alinha o texto à direita */
+    margin-left: auto; /* Empurra o carrossel para a direita */
+}
+
+.carrossel-titulo {
+    font-size: 24px;
+    color: var(--cor-texto-principal);
+}
+
+.carrossel-texto {
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Espaço entre a parte de cima e o card da receita */
+    max-width: 1120px;
+    margin: 0;
+    padding: 2rem;
+}
+
+.linha-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 380px;    
+}
+
+.texto {
+    flex: 1;
+}
+
+.carrossel {
+    flex: 1;
+    text-align: right;
+}
+
+.dodia {
+    background-color: rgba(181, 197, 178, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    gap: 10px;
+}
+
+.linha-cards {
+    display: flex; 
+    justify-content: space-between; /* espaço entre os cards */
+    align-items: flex-start; /* cards no topo */
+    gap: 20px; /* espaçamento de um card pra outro */
+    margin-top: 40px; /* espaço na parte de cima dos cards*/
+}
+
+.novidades,
+.avaliadas {
+    flex: 1; /* Cada card ocupa metade do espaço disponível */
+    background-color: rgba(181, 197, 178, 0.3); 
+    padding: 20px; /* Espaçamento interno de cada card */
+    border-radius: 8px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.titulo {
+    color: var(--cor-botao); 
+    font-size: 18px;
+    margin-bottom: 10px; /* espaçamento entre título e descrição */
+}
+
+.descricao {
+    font-size: 14px;
+    color: var(--cor-texto-secundario); 
+}
