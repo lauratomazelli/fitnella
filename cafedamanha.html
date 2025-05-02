@@ -34,7 +34,7 @@
 
         <section class="receitas">
 
-            <div class="card-receita">
+            <div class="card-receita" onclick="expandirCard(this)">
                 <div class="resumo">
                     <h2>Panqueca de Banana sem farinha</h2>
                     <p class="avaliacao">4/5 ⭐</p>
@@ -64,7 +64,7 @@
             </div>
 
             
-            <div class="card-receita">
+            <div class="card-receita "onclick="expandirCard(this)">
                 <div class="resumo">
                     <h2>Omelete de Claras</h2>
                     <p class="avaliacao">5/5 ⭐</p>
@@ -91,7 +91,7 @@
                 </div>
             </div>
 
-            <div class="card-receita">
+            <div class="card-receita" onclick="expandirCard(this)">
                 <div class="resumo">
                   <h2>Overnight Oats</h2>
                   <p class="avaliacao">4.5/5 ⭐</p>
@@ -110,14 +110,14 @@
                   <p>Misture tudo em um pote e deixe na geladeira por 6-8h. Pode fazer de noite pra comer de manhça ou durante o dia para comer de noite.</p>
         
                   <div class="carrossel-receitas">
-                    <img class="carrossel-receitas-img" src="overnight1.jpg" alt="Overnight Oats 1">
-                    <img class="carrossel-receitas-img" src="overnight2.jpg" alt="Overnight Oats 2">
-                    <img class="carrossel-receitas-img" src="overnight3.jpg" alt="Overnight Oats 3">
+                    <img class="carrossel-receitas-img" src="Assets/overnight1.png" alt="Overnight Oats 1">
+                    <img class="carrossel-receitas-img" src="Assets/overnight2.png" alt="Overnight Oats 2">
+                    <img class="carrossel-receitas-img" src="Assets/overnight3" alt="Overnight Oats 3">
                   </div>
                 </div>
               </div>
 
-              <div class="card-receita">
+              <div class="card-receita" onclick="expandirCard(this)">
                 <div class="resumo">
                   <h2>Crepioca de Frango</h2>
                   <p class="avaliacao">4.7/5 ⭐</p>
@@ -137,7 +137,7 @@
                   <p>Misture o ovo com a goma de tapioca. Despeje em frigideira antiaderente e adicione o frango por cima. Quando firmar, dobre como panqueca.</p>
               
                   <div class="carrossel-receitas">
-                    <img class="carrossel-receitas-img" src="crepioca1.jpg" alt="Crepioca aberta com frango">
+                    <img class="carrossel-receitas-img" src="Assets/crepioca1" alt="Crepioca aberta com frango">
                     <img class="carrossel-receitas-img" src="crepioca2.jpg" alt="Crepioca dobrada com recheio">
                     <img class="carrossel-receitas-img" src="crepioca3.jpg" alt="Detalhe da crepioca">
                   </div>
@@ -145,7 +145,7 @@
               </div>
 
 
-              <div class="card-receita">
+              <div class="card-receita" onclick="expandirCard(this)">
                 <div class="resumo">
                   <h2>Mingau Proteico</h2>
                   <p class="avaliacao">5/5 ⭐</p>
@@ -172,7 +172,7 @@
                 </div>
               </div>
 
-              <div class="card-receita">
+              <div class="card-receita" onclick="expandirCard(this)">
                 <div class="resumo">
                   <h2>Pão de Micro-ondas Low Carb</h2>
                   <p class="avaliacao">4.8/5 ⭐</p>
@@ -199,7 +199,7 @@
                 </div>
               </div>
 
-              <div class="card-receita">
+              <div class="card-receita" onclick="expandirCard(this)">
                 <div class="resumo">
                     <h2>Torta de Frigideira Low Carb</h2>
                     <p class="avaliacao">4.5/5 ⭐</p>
@@ -231,6 +231,17 @@
     <footer>
         <p>© 2025 Fitnella - por Laura Tomazelli 💚</p>
     </footer>
+
+    <script>
+      document.querySelectorAll('.card-receita').forEach(card => {
+        card.addEventListener('click', () => {
+          // Remove a classe 'expandido' de todos os outros cards
+          document.querySelectorAll('.card-receita').forEach(c => c.classList.remove('expandido'));
+          // Adiciona a classe 'expandido' no card clicado
+          card.classList.add('expandido');
+        });
+      });
+    </script>
 
     
 </body>
